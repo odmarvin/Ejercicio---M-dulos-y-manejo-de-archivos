@@ -1,4 +1,11 @@
 import { readFileSync } from "fs";
+
+interface Resultado{
+    promedio: number,
+    estudiantes: string[],
+    cantidadEstudiantes: number
+}
+
 function promedio(archivo: string) : number {
     const lineas = readFileSync(archivo, 'utf-8')
     const linea = lineas.split('\n')
